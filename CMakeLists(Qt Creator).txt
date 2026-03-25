@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.16)
+project(dtvis LANGUAGES CXX)
+
+include(qt.cmake)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui Widgets Concurrent)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui Widgets Concurrent)
+qt_standard_project_setup()
+
+qt_add_executable(dtvis
+    main.cpp
+    MainWindow.ui
+    MainWindow.h
+    MainWindow.cpp
+    GraphicWindow.ui
+    GraphicWindow.h
+    GraphicWindow.cpp
+    Parsing/ParsingImplementation.cpp
+)
+
+set_target_properties(${PROJECT_NAME}
+    PROPERTIES
+        WIN32_EXECUTABLE TRUE
+)
+
+target_link_libraries(dtvis
+    PUBLIC
+        Qt${QT_VERSION_MAJOR}::Core
+        Qt${QT_VERSION_MAJOR}::Gui
+        Qt${QT_VERSION_MAJOR}::Widgets
+        Qt${QT_VERSION_MAJOR}::Concurrent
+)
