@@ -15,9 +15,13 @@ After, get 2D matrix based upon index k and build color 2D-graphic of her values
 IMPLEMENTATION:
 
 IParsing: data file parsing interface declaration;
+
 ParsingImplementation.h, ParsingImplementation.cpp: implementation of above interface;
+
 ApplicationComponents.h: class factory, returns IParsing implementation;
+
 MainWindow.ui, MainWindow.h, MainWindow.cpp-window for data file and 2D matrix choice;
+
 GraphicWindow.ui, GraphicWindow.h, GraphicWindow.cpp-window to build color 2D-graphic.
 
 SOME COMMENTS TO IMPLEMENTATION:
