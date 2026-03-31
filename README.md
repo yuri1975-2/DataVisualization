@@ -3,13 +3,17 @@ GIVEN:
 Data file (7-zipped data.7z) containded 2 chunks of 3D matrix (set of 2D matrix contained some abstract values).
 
 NEEDS TO BE IMPLEMENTED:
+
 Parse data file and form resulting data: 3D matrix contained set of 2D matrix with resulting values calculated from original chunks as:
+
             value[k, i, j] = sqrt(pow(value_chunk1[k, i, j], 2) + pow(value_chunk2[k, j, j], 2))
+            
 and represents as uint16_t.
 
 After, get 2D matrix based upon index k and build color 2D-graphic of her values.
 
 IMPLEMENTATION:
+
 IParsing: data file parsing interface declaration;
 ParsingImplementation.h, ParsingImplementation.cpp: implementation of above interface;
 ApplicationComponents.h: class factory, returns IParsing implementation;
@@ -17,6 +21,7 @@ MainWindow.ui, MainWindow.h, MainWindow.cpp-window for data file and 2D matrix c
 GraphicWindow.ui, GraphicWindow.h, GraphicWindow.cpp-window to build color 2D-graphic.
 
 SOME COMMENTS TO IMPLEMENTATION:
+
 Since, in general, number of data points doesn't corresponds to number at graphic, we use mapping between data and graphic rects (possibly, with uninteger
 size length).
 
