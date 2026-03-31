@@ -20,7 +20,7 @@ ParsingImplementation.h, ParsingImplementation.cpp: implementation of above inte
 
 ApplicationComponents.h: class factory, returns IParsing implementation;
 
-MainWindow.ui, MainWindow.h, MainWindow.cpp-window for data file and 2D matrix choice;
+MainWindow.ui, MainWindow.h, MainWindow.cpp-window for data file load and 2D matrix choice;
 
 GraphicWindow.ui, GraphicWindow.h, GraphicWindow.cpp-window to build color 2D-graphic.
 
