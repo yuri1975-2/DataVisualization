@@ -1,6 +1,6 @@
 GIVEN:
 
-Data file (7-zipped data.7z) containded 2 chunks of 3D matrix (set of 2D matrix contained some abstract values).
+Data file (7-zipped data.7z) contained 2 chunks of 3D matrix (set of 2D matrix contained some abstract values).
 
 NEEDS TO BE IMPLEMENTED:
 
